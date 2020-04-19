@@ -1,0 +1,124 @@
+/* Decalring variables under root scope  */
+:root
+{
+    --page-1-color : steelblue;
+    --page-2-color : tan;
+    --page-3-color : teal;
+    --page-4-color : slateblue;
+    --animate-speed : 2.5s;
+}
+
+body
+{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    /* To Hide scrolling option  */
+    overflow: hidden; 
+}
+
+/* Page Colors  */
+#page-1 {background : var(--page-1-color);}
+#page-2 {background : var(--page-2-color);}
+#page-3 {background : var(--page-3-color);}
+#page-4 {background : var(--page-4-color);}
+
+.page
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+
+.page h1 
+{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+    color: #fff;
+    
+}
+
+/* Page Animation  */
+#page-1 h1
+{
+    transform: translateY(-600px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+@keyframes heading
+{
+    20% 
+    {
+       transform: translateY(0);
+    }
+    60% 
+    {
+       transform: translateY(-110px);
+    }
+    100% 
+    {
+       transform: translateY(0);
+    }
+
+  
+}
+
+#page-1 p
+{
+    transform: translateX(-1800px);
+    animation: para var(--animate-speed) forwards ease-in 2.6s;
+}
+
+
+@keyframes para
+{
+    to 
+    {
+       transform: translateX(0);
+    }
+}
+
+.page p 
+{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.btn 
+{
+    display: inline-block;
+    padding : 1rem 2rem;
+    background: #f4f4f4;
+    color : #333;
+    text-decoration: none;
+    border : none;
+    margin-top: 1rem;
+    font-style: 1.1rem;
+    transition: all 0.5s ease-in;
+}
+
+.btn:hover
+{
+    background: #333;
+    color: #fff;
+    transform:  translateY(10px) ;
+}
+
+.btn-dark
+{
+    background: #333;
+    color: #fff;
+}
+
+.btn-dark:hover
+{
+    color: #333;
+    background: #fff;
+}
